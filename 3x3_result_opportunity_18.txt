@@ -86,3 +86,15 @@ str(learning_rate)+' 	'+str(lambda_loss_amount)+' 	'+str(keep_prob_for_dropout)+
 str(learning_rate)+' 	'+str(lambda_loss_amount)+' 	'+str(accuracy_out)+' 	'+str(best_accuracy)+' 	'+str(f1_score_out)+' 	'+str(best_f1_score)
 0.001 	0.005 	0.874368 	(0.89801902, 'iter: 50') 	0.876803471919 	(0.89344693082510784, 'iter: 50')
 
+
+
+20191226 默认配置
+final test accuracy: 0.8774004578590393
+best epoch's test accuracy: (0.88872045, 'iter: 42')
+final F1 score: 0.8656530887345306
+best epoch's F1 score: (0.876080901891997, 'iter: 26')
+
+0.87740046 (0.88872045, 'iter: 42') 0.8656530887345306 (0.876080901891997, 'iter: 26')
+________________________________________________________
+
+Done.

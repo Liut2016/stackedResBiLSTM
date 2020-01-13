@@ -14,3 +14,16 @@ Deep_layer=3, Res_layer=0, Bidir=True
 Deep_layer=3, Res_layer=0, Bidir=False
 0.001 	0.005 	15.0 	0.898541 	(0.91822189, 'iter: 118') 	0.898466704298 	(0.91762609367351711, 'iter: 118')
 
+
+
+
+tf 1.15
+
+20191225  HAR  默认配置
+final test accuracy: 0.8825924396514893
+best epoch's test accuracy: (0.91415, 'iter: 117')
+final F1 score: 0.882519171421188
+best epoch's F1 score: (0.9138760340826544, 'iter: 117')
+
+0.88259244 (0.91415, 'iter: 117') 0.882519171421188 (0.9138760340826544, 'iter: 117')
+

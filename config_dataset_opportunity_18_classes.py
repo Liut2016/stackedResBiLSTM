@@ -5,8 +5,10 @@ from sliding_window import sliding_window
 
 import numpy as np
 
-import cPickle as cp
+#import cPickle as cp
+import _pickle as cp
 import time
+import os
 
 
 #--------------------------------------------
@@ -93,7 +95,7 @@ NUM_UNITS_LSTM = 128
 
 def load_dataset(filename):
 
-    f = file(filename, 'rb')
+    f = open(filename, 'rb')
     data = cp.load(f)
     f.close()
 
@@ -135,7 +137,7 @@ X_test, y_test = opp_sliding_window(X_test, y_test, SLIDING_WINDOW_LENGTH, SLIDI
 X_train, y_train = opp_sliding_window(X_train, y_train, SLIDING_WINDOW_LENGTH, SLIDING_WINDOW_STEP)
 
 for mat in [X_train, y_train, X_test, y_test]:
-    print mat.shape
+    print (mat.shape)
 
 
 #--------------------------------------------
@@ -148,9 +150,9 @@ trial_name = "{}x{}".format(n_layers_in_highway, n_stacked_layers)
 
 for learning_rate in [0.001]:
     for lambda_loss_amount in [0.005]:
-        print "learning_rate: {}".format(learning_rate)
-        print "lambda_loss_amount: {}".format(lambda_loss_amount)
-        print ""
+        print ("learning_rate: {}".format(learning_rate))
+        print ("lambda_loss_amount: {}".format(lambda_loss_amount))
+        print ("")
 
         class EditedConfig(Config):
             def __init__(self, X, Y):
@@ -170,6 +172,6 @@ for learning_rate in [0.001]:
             f.write("""str(learning_rate)+' \t'+str(lambda_loss_amount)+' \t'+str(accuracy_out)+' \t'+str(best_accuracy)+' \t'+str(f1_score_out)+' \t'+str(best_f1_score)\n""")
             f.write(   str(learning_rate)+' \t'+str(lambda_loss_amount)+' \t'+str(accuracy_out)+' \t'+str(best_accuracy)+' \t'+str(f1_score_out)+' \t'+str(best_f1_score)+'\n\n' )
 
-        print "________________________________________________________"
-    print ""
-print "Done."
+        print ("________________________________________________________")
+    print ("")
+print ("Done.")

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" autoUpload="Always" serverName="liutao@202.117.54.91">
+    <serverData>
+      <paths name="liutao@202.117.54.91">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/project/HAR-stacked-residual-bidir-LSTMs" local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myAutoUpload" value="ALWAYS" />
+  </component>
+</project>

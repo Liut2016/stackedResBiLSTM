@@ -1,5 +1,5 @@
 
-from lstm_architecture import one_hot, run_with_config
+from lstm_architecture_v2 import one_hot, run_with_config
 
 import numpy as np
 
@@ -113,6 +113,7 @@ def load_X(X_signals_paths):
         # Read dataset from disk, dealing with text files' syntax
         X_signals.append(
             [np.array(serie, dtype=np.float32) for serie in [
+                #row.replace('  ', ' ').strip().split(' ') for row in file
                 row.replace(b'  ', b' ').strip().split(b' ') for row in file
             ]]
         )
@@ -143,6 +144,7 @@ def load_y(y_path):
     # Read dataset from disk, dealing with text file's syntax
     y_ = np.array(
         [elem for elem in [
+            #row.replace('  ', ' ').strip().split(' ') for row in file
             row.replace(b'  ', b' ').strip().split(b' ') for row in file
         ]],
         dtype=np.int32
